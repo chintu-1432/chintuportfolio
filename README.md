@@ -4,7 +4,7 @@ A modern and responsive personal portfolio website built to showcase my skills, 
 
 ## 🚀 Live Demo
 
-[View Portfolio](https://mallaiahchowdhary.vercel.app/))
+[View Portfolio](https://mallaiahchowdary.vercel.app/))
 
 ## 👨‍💻 About Me
 

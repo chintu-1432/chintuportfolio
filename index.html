@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    
     <link rel="stylesheet"  type="text/css" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Appaneni Mallaiah Chowdary</title>
@@ -13,9 +12,15 @@
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
       <div class="nav-container">
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-          <span class="hamburger"></span>
-        </button>
+        
+        <div class="nav-actions">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <span class="theme-icon">&#127769;</span>
+          </button>
+          <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <span class="hamburger"></span>
+          </button>
+        </div>
         <ul class="nav-menu" id="navMenu">
           <li><a href="#home" class="nav-link">Home</a></li>
           <li><a href="#about" class="nav-link">About</a></li>
@@ -68,30 +73,20 @@
         <div class="hero-image">
           <div class="profile-image-wrapper">
             <div class="profile-image">
-              
               <img src="https://res.cloudinary.com/dkx0ai3f6/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1750231490/1432_bxnd7y.jpg" alt="Profile Photo" />
-    
             </div>
           </div>
         </div>
-      </div>
-      <div class="scroll-indicator">
-        <a href="#about" aria-label="Scroll to about section">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2c3.309 0 6 2.691 6 6 0 2.967-2.167 5.431-5 5.906v-7.906h-2v7.906c-2.833-.475-5-2.939-5-5.906 0-3.309 2.691-6 6-6zm-6 8c0 2.027.758 3.876 2 5.289v8.711l4-2 4 2v-8.711c1.242-1.413 2-3.262 2-5.289 0 4.411-3.589 8-8 8s-8-3.589-8-8z"/>
-          </svg>
-        </a>
       </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="section">
       <div class="container">
-        <h2 class="section-title">About Me</h2>
+        <h2 class="section-title reveal">About Me</h2>
         <div class="about-content">
-
           <!-- Left: Image -->
-          <div class="about-image-col fade-in">
+          <div class="about-image-col reveal-left">
             <svg class="brush-mask-svg" viewBox="0 0 320 420" preserveAspectRatio="xMidYMid slice">
               <defs>
                 <filter id="brush-turbulence" x="-20%" y="-20%" width="140%" height="140%">
@@ -103,7 +98,7 @@
                 </mask>
               </defs>
               <image
-                href="https://res.cloudinary.com/dcyi7xspg/image/upload/v1781333653/GCKS0978_dt4wln.png"
+                href="https://res.cloudinary.com/dcyi7xspg/image/upload/v1781462474/WhatsApp_Image_2026-06-15_at_12.10.49_AM_smbhs2.jpg"
                 x="0" y="0" width="320" height="420"
                 preserveAspectRatio="xMidYMid slice"
                 mask="url(#brush-paint-mask)"
@@ -112,47 +107,46 @@
           </div>
 
           <!-- Right: Text -->
-          <div class="about-text-col fade-in">
+          <div class="about-text-col reveal-right">
             <p>
               Hello! I'm <strong>Appaneni Mallaiah Chowdary</strong>, a Computer Science graduate passionate about software development and problem-solving. I enjoy building practical applications using Java, Spring Boot, MySQL, and modern web technologies.
             </p>
             <p>
               Through projects like <strong>Placify</strong> and <strong>Educline - AI</strong>, I have gained hands-on experience in backend development, database management, and building complete software solutions. I am continuously learning and improving my skills to grow as a software developer.
             </p>
-            
           </div>
-
         </div>
       </div>
     </section>
+
     <!-- Skills Section -->
     <section id="skills" class="section section-alt">
       <div class="container">
-        <h2 class="section-title">Technical Skills</h2>
+        <h2 class="section-title reveal">Technical Skills</h2>
 
         <!-- Languages -->
-        <div class="skills-block fade-in">
+        <div class="skills-block reveal">
           <h3 class="skills-block-title">Languages</h3>
           <div class="skills-logo-grid">
-            <div class="skill-logo-card">
+            <div class="skill-logo-card reveal-scale stagger-1">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java" />
               <span>Java</span>
             </div>
-            <div class="skill-logo-card">
+            <div class="skill-logo-card reveal-scale stagger-2">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" />
               <span>Python</span>
             </div>
-            <div class="skill-logo-card">
+            <div class="skill-logo-card reveal-scale stagger-3">
               <div class="skill-svg-icon sql-icon">
                 <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <ellipse cx="24" cy="11" rx="14" ry="5" fill="#00758F" opacity="0.9"/>
                   <path d="M10 11v8c0 2.76 6.27 5 14 5s14-2.24 14-5v-8" fill="#00758F" opacity="0.7"/>
                   <path d="M10 19v8c0 2.76 6.27 5 14 5s14-2.24 14-5v-8" fill="#00758F" opacity="0.5"/>
                   <path d="M10 27v8c0 2.76 6.27 5 14 5s14-2.24 14-5v-8" fill="#00758F" opacity="0.35"/>
-                  <ellipse cx="24" cy="11" rx="14" ry="5" fill="none" stroke="#00A8CC" stroke-width="1.5"/>
-                  <path d="M10 11v8c0 2.76 6.27 5 14 5s14-2.24 14-5v-8" fill="none" stroke="#00A8CC" stroke-width="1.5"/>
-                  <path d="M10 19v8c0 2.76 6.27 5 14 5s14-2.24 14-5v-8" fill="none" stroke="#00A8CC" stroke-width="1.5"/>
-                  <path d="M10 27v8c0 2.76 6.27 5 14 5s14-2.24 14-5v-8" fill="none" stroke="#00A8CC" stroke-width="1.5"/>
+                  <ellipse cx="24" cy="11" rx="14" ry="5" fill="none" stroke="#00D4FF" stroke-width="1.5"/>
+                  <path d="M10 11v8c0 2.76 6.27 5 14 5s14-2.24 14-5v-8" fill="none" stroke="#00D4FF" stroke-width="1.5"/>
+                  <path d="M10 19v8c0 2.76 6.27 5 14 5s14-2.24 14-5v-8" fill="none" stroke="#00D4FF" stroke-width="1.5"/>
+                  <path d="M10 27v8c0 2.76 6.27 5 14 5s14-2.24 14-5v-8" fill="none" stroke="#00D4FF" stroke-width="1.5"/>
                 </svg>
               </div>
               <span>SQL</span>
@@ -161,29 +155,29 @@
         </div>
 
         <!-- Backend Development -->
-        <div class="skills-block fade-in">
+        <div class="skills-block reveal">
           <h3 class="skills-block-title">Backend Development</h3>
           <div class="skills-logo-grid">
-            <div class="skill-logo-card">
+            <div class="skill-logo-card reveal-scale stagger-1">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" alt="Spring Boot" />
               <span>Spring Boot</span>
             </div>
-            <div class="skill-logo-card">
+            <div class="skill-logo-card reveal-scale stagger-2">
               <div class="skill-svg-icon rest-icon">
                 <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="4" y="16" width="40" height="16" rx="4" fill="#1E293B" stroke="#3B82F6" stroke-width="1.5"/>
-                  <text x="24" y="27" text-anchor="middle" font-size="10" font-weight="700" font-family="monospace" fill="#3B82F6">API</text>
-                  <path d="M12 10 L6 16" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round"/>
-                  <path d="M24 8 L24 16" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round"/>
-                  <path d="M36 10 L42 16" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round"/>
-                  <path d="M12 38 L6 32" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round"/>
-                  <path d="M24 40 L24 32" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round"/>
-                  <path d="M36 38 L42 32" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round"/>
+                  <rect x="4" y="16" width="40" height="16" rx="4" fill="#1E293B" stroke="#00D4FF" stroke-width="1.5"/>
+                  <text x="24" y="27" text-anchor="middle" font-size="10" font-weight="700" font-family="monospace" fill="#00D4FF">API</text>
+                  <path d="M12 10 L6 16" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M24 8 L24 16" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M36 10 L42 16" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M12 38 L6 32" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M24 40 L24 32" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M36 38 L42 32" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/>
                 </svg>
               </div>
               <span>REST APIs</span>
             </div>
-            <div class="skill-logo-card">
+            <div class="skill-logo-card reveal-scale stagger-3">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/maven/maven-original.svg" alt="Maven" />
               <span>Maven</span>
             </div>
@@ -191,22 +185,22 @@
         </div>
 
         <!-- Frontend Development -->
-        <div class="skills-block fade-in">
+        <div class="skills-block reveal">
           <h3 class="skills-block-title">Frontend Development</h3>
           <div class="skills-logo-grid">
-            <div class="skill-logo-card">
+            <div class="skill-logo-card reveal-scale stagger-1">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5" />
               <span>HTML5</span>
             </div>
-            <div class="skill-logo-card">
+            <div class="skill-logo-card reveal-scale stagger-2">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3" />
               <span>CSS3</span>
             </div>
-            <div class="skill-logo-card">
+            <div class="skill-logo-card reveal-scale stagger-3">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" />
               <span>JavaScript</span>
             </div>
-            <div class="skill-logo-card">
+            <div class="skill-logo-card reveal-scale stagger-4">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" />
               <span>Bootstrap</span>
             </div>
@@ -214,14 +208,14 @@
         </div>
 
         <!-- Databases -->
-        <div class="skills-block fade-in">
+        <div class="skills-block reveal">
           <h3 class="skills-block-title">Databases</h3>
           <div class="skills-logo-grid">
-            <div class="skill-logo-card">
+            <div class="skill-logo-card reveal-scale stagger-1">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL" />
               <span>MySQL</span>
             </div>
-            <div class="skill-logo-card">
+            <div class="skill-logo-card reveal-scale stagger-2">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="MongoDB" />
               <span>MongoDB</span>
             </div>
@@ -229,41 +223,41 @@
         </div>
 
         <!-- Tools & Technologies -->
-        <div class="skills-block fade-in">
+        <div class="skills-block reveal">
           <h3 class="skills-block-title">Tools &amp; Technologies</h3>
           <div class="skills-logo-grid">
-            <div class="skill-logo-card">
+            <div class="skill-logo-card reveal-scale stagger-1">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git" />
               <span>Git</span>
             </div>
-            <div class="skill-logo-card">
+            <div class="skill-logo-card reveal-scale stagger-2">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub" class="invert-icon" />
               <span>GitHub</span>
             </div>
-            <div class="skill-logo-card">
+            <div class="skill-logo-card reveal-scale stagger-3">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="VS Code" />
               <span>VS Code</span>
             </div>
-            <div class="skill-logo-card">
+            <div class="skill-logo-card reveal-scale stagger-4">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/eclipse/eclipse-original.svg" alt="Eclipse" />
               <span>Eclipse</span>
             </div>
-            <div class="skill-logo-card">
+            <div class="skill-logo-card reveal-scale stagger-5">
               <div class="skill-svg-icon copilot-icon">
                 <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="24" cy="24" r="20" fill="#1E293B" stroke="#3B82F6" stroke-width="1.5"/>
+                  <circle cx="24" cy="24" r="20" fill="#1E293B" stroke="#00D4FF" stroke-width="1.5"/>
                   <circle cx="18" cy="20" r="4" fill="#F8FAFC"/>
                   <circle cx="30" cy="20" r="4" fill="#F8FAFC"/>
                   <circle cx="19" cy="19" r="1.5" fill="#1E293B"/>
                   <circle cx="31" cy="19" r="1.5" fill="#1E293B"/>
                   <path d="M16 28 Q24 34 32 28" stroke="#F8FAFC" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-                  <path d="M12 15 Q14 10 18 12" stroke="#3B82F6" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-                  <path d="M36 15 Q34 10 30 12" stroke="#3B82F6" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                  <path d="M12 15 Q14 10 18 12" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                  <path d="M36 15 Q34 10 30 12" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round" fill="none"/>
                 </svg>
               </div>
               <span>GitHub Copilot</span>
             </div>
-            <div class="skill-logo-card">
+            <div class="skill-logo-card reveal-scale stagger-6">
               <div class="skill-svg-icon claude-icon">
                 <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="24" cy="24" r="20" fill="#1a1a1a"/>
@@ -276,16 +270,15 @@
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="section">
       <div class="container">
-        <h2 class="section-title">Projects</h2>
+        <h2 class="section-title reveal">Projects</h2>
         <div class="projects-grid">
-          <div class="project-card fade-in">
+          <div class="project-card reveal">
             <div class="project-content">
               <h3 class="project-title">Placify</h3>
               <p class="project-subtitle">Student Placement Preparation Tracker</p>
@@ -301,7 +294,7 @@
                 <span class="tech-tag">REST APIs</span>
               </div>
               <div class="project-links">
-               <a href="https://github.com/chintu-1432/placify" target="_blank" rel="noopener noreferrer" class="project-link project-link-demo" aria-label="View code">
+                <a href="https://github.com/chintu-1432/placify" target="_blank" rel="noopener noreferrer" class="project-link project-link-demo" aria-label="View code">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                   </svg>
@@ -310,7 +303,7 @@
               </div>
             </div>
           </div>
-          <div class="project-card fade-in">
+          <div class="project-card reveal">
             <div class="project-content">
               <h3 class="project-title">Educline-AI</h3>
               <p class="project-subtitle">AI-Powered Educational Platform</p>
@@ -339,9 +332,9 @@
     <!-- Experience Section -->
     <section id="experience" class="section section-alt">
       <div class="container">
-        <h2 class="section-title">Experience</h2>
+        <h2 class="section-title reveal">Experience</h2>
         <div class="timeline">
-          <div class="timeline-item fade-in">
+          <div class="timeline-item reveal">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
               <div class="timeline-header">
@@ -365,9 +358,9 @@
     <!-- Education Section -->
     <section id="education" class="section">
       <div class="container">
-        <h2 class="section-title">Education</h2>
+        <h2 class="section-title reveal">Education</h2>
         <div class="education-grid">
-          <div class="education-card fade-in">
+          <div class="education-card reveal stagger-1">
             <div class="education-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 0l-12 9 12 9 8.5-6.375v8.375h3v-10l-11.5-1zm-2 18l-6-4.5v-4l6 4.5v4zm12-4.5l-6 4.5v-4l6-4.5v4z"/>
@@ -379,7 +372,7 @@
               <p class="education-grade">CGPA: 8.3</p>
             </div>
           </div>
-          <div class="education-card fade-in">
+          <div class="education-card reveal stagger-2">
             <div class="education-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 0l-12 9 12 9 8.5-6.375v8.375h3v-10l-11.5-1zm-2 18l-6-4.5v-4l6 4.5v4zm12-4.5l-6 4.5v-4l6-4.5v4z"/>
@@ -391,7 +384,7 @@
               <p class="education-grade">Percentage: 87.4%</p>
             </div>
           </div>
-          <div class="education-card fade-in">
+          <div class="education-card reveal stagger-3">
             <div class="education-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 0l-12 9 12 9 8.5-6.375v8.375h3v-10l-11.5-1zm-2 18l-6-4.5v-4l6 4.5v4zm12-4.5l-6 4.5v-4l6-4.5v4z"/>
@@ -410,9 +403,9 @@
     <!-- Certifications Section -->
     <section id="certifications" class="section section-alt">
       <div class="container">
-        <h2 class="section-title">Certifications</h2>
+        <h2 class="section-title reveal">Certifications</h2>
         <div class="certifications-grid">
-          <div class="certification-card fade-in">
+          <div class="certification-card reveal-scale stagger-1">
             <div class="certification-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
@@ -423,7 +416,7 @@
               <p class="certification-issuer">AICTE Edunet Foundation</p>
             </div>
           </div>
-          <div class="certification-card fade-in">
+          <div class="certification-card reveal-scale stagger-2">
             <div class="certification-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
@@ -434,7 +427,7 @@
               <p class="certification-issuer">HackerRank</p>
             </div>
           </div>
-          <div class="certification-card fade-in">
+          <div class="certification-card reveal-scale stagger-3">
             <div class="certification-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
@@ -449,74 +442,44 @@
       </div>
     </section>
 
-    <!---contact----->
-<section id="contact" class="section contact">
-  <div class="container">
-
-    <h2 class="section-title">Get In Touch</h2>
-
-    <p class="contact-intro">
-      I'm currently looking for new opportunities. Feel free to reach out if you'd like to connect!
-    </p>
-   <form
-  class="contact-form"
-  action="https://formspree.io/f/mkgbpjyo"
-  method="POST"
->
-  <input
-    type="text"
-    name="name"
-    placeholder="Your Name"
-    required
-  >
-
-  <input
-    type="email"
-    name="email"
-    placeholder="Your Email"
-    required
-  >
-
-  <textarea
-    name="message"
-    placeholder="Your Message"
-    required
-  ></textarea>
-
-  <button type="submit" class="btn">
-    Send Message
-  </button>
-</form>
-
-<div class="social-icons">
-  <a href="mailto:mallaiahchowdhary2432@gmail.com">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Email">
-  </a>
-
-  <a href="https://github.com/chintu-1432" target="_blank">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
-  </a>
-
-  <a href="https://www.linkedin.com/in/mallaiah-appaneni-3a25932b4/" target="_blank">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
-  </a>
-
-  <a href="https://www.instagram.com/mallaiah_chowdary" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
-  </a>
-</div>
-
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
       <div class="container">
-        <p class="footer-text">
-        Built by Appaneni Mallaiah Chowdary
+        <h2 class="section-title reveal">Get In Touch</h2>
+        <p class="contact-intro reveal">
+          I'm currently looking for new opportunities. Feel free to reach out if you'd like to connect!
         </p>
-        <p class="footer-copyright">
-          &copy; 2026 All rights reserved.
-        </p>
+        <form class="contact-form reveal" action="https://formspree.io/f/mkgbpjyo" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+
+        <div class="social-icons">
+          <a href="mailto:mallaiahchowdhary2432@gmail.com">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Email">
+          </a>
+          <a href="https://github.com/chintu-1432" target="_blank">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+          </a>
+          <a href="https://www.linkedin.com/in/mallaiah-appaneni-3a25932b4/" target="_blank">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
+          </a>
+          <a href="https://www.instagram.com/mallaiah_chowdary" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+          </a>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+          <div class="container">
+            <p class="footer-text">Built by Appaneni Mallaiah Chowdary</p>
+            <p class="footer-copyright">&copy; 2026 All rights reserved.</p>
+          </div>
+        </footer>
       </div>
-    </footer>
+    </section>
 
     <script src="script.js"></script>
   </body>

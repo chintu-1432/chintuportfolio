@@ -65,15 +65,124 @@ body.light-mode {
   --glass-border: rgba(0, 0, 0, 0.08);
 
   --nav-bg: rgba(255, 255, 255, 0.9);
+  --accent-glow: rgba(0, 212, 255, 0.1);
 }
 
 body.light-mode .navbar {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
+body.light-mode .nav-toggle,
+body.light-mode .theme-toggle,
+body.light-mode .nav-menu {
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .hamburger,
+body.light-mode .hamburger::before,
+body.light-mode .hamburger::after {
+  background: var(--text-primary);
+}
+
+body.light-mode .hero {
+  background:
+    radial-gradient(ellipse at 30% 20%, rgba(0, 212, 255, 0.08) 0%, transparent 45%),
+    radial-gradient(ellipse at 70% 60%, rgba(59, 130, 246, 0.06) 0%, transparent 40%),
+    var(--bg-primary);
+}
+
 body.light-mode .hero::before {
-  background: radial-gradient(circle, rgba(0, 212, 255, 0.15) 0%, transparent 60%);
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.12) 0%, transparent 60%);
+}
+
+body.light-mode .btn-secondary {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .btn-secondary:hover {
+  background: rgba(0, 212, 255, 0.1);
+}
+
+body.light-mode .social-link {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .social-link:hover,
+body.light-mode .social-icons a:hover {
+  background: rgba(0, 212, 255, 0.1);
+}
+
+body.light-mode .social-icons a {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .section-alt {
+  background: #f8fafc;
+}
+
+body.light-mode .about-image-col,
+body.light-mode .about-text-col,
+body.light-mode .skill-logo-card,
+body.light-mode .project-card,
+body.light-mode .timeline-content,
+body.light-mode .education-card,
+body.light-mode .certification-card,
+body.light-mode .contact-card {
+  background: rgba(0, 0, 0, 0.02);
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+body.light-mode .about-image-col::before {
+  opacity: 0.2;
+}
+
+body.light-mode .skill-logo-card:hover,
+body.light-mode .project-card:hover,
+body.light-mode .education-card:hover,
+body.light-mode .certification-card:hover {
+  box-shadow: 0 8px 30px rgba(0, 212, 255, 0.15);
+}
+
+body.light-mode .tech-tag {
+  background: rgba(0, 212, 255, 0.08);
+  border-color: rgba(0, 212, 255, 0.2);
+}
+
+body.light-mode .timeline::before {
+  background: var(--accent-gradient);
+}
+
+body.light-mode .timeline-marker {
+  border-color: var(--bg-secondary);
+}
+
+body.light-mode .contact-form input,
+body.light-mode .contact-form textarea {
+  background: rgba(0, 0, 0, 0.02);
+  border-color: rgba(0, 0, 0, 0.08);
+  color: var(--text-primary);
+}
+
+body.light-mode .contact-form input::placeholder,
+body.light-mode .contact-form textarea::placeholder {
+  color: var(--text-muted);
+}
+
+body.light-mode .contact-form input:focus,
+body.light-mode .contact-form textarea:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.1);
+}
+
+body.light-mode .footer {
+  background: var(--bg-secondary);
+  border-top-color: rgba(0, 0, 0, 0.08);
 }
 
 body.light-mode .profile-image::before,
@@ -82,11 +191,7 @@ body.light-mode .profile-image::after {
 }
 
 body.light-mode .about-image-col::before {
-  background: linear-gradient(135deg, rgba(0, 212, 255, 0.4), rgba(59, 130, 246, 0.3));
-}
-
-body.light-mode .timeline::before {
-  background: var(--accent-gradient);
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.3), rgba(59, 130, 246, 0.2));
 }
 
 /* Theme Toggle Button */
@@ -238,13 +343,16 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   max-width: 1100px;
   margin: 0 auto;
-
   padding: 16px var(--spacing-md);
-
   position: relative;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .nav-actions {
@@ -256,13 +364,10 @@ button {
 .nav-logo {
   font-size: 1.6rem;
   font-weight: 700;
-
   background: var(--accent-gradient);
-
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-
   letter-spacing: -0.5px;
 }
 
@@ -315,36 +420,6 @@ button {
 .nav-link.active {
   color: var(--accent-primary);
   background: var(--accent-glow);
-}
-
-/* Theme Button */
-
-.theme-toggle {
-  width: 42px;
-  height: 42px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: var(--glass-bg);
-
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-
-  border: 1px solid var(--glass-border);
-  border-radius: 12px;
-
-  cursor: pointer;
-
-  color: var(--text-primary);
-  font-size: 18px;
-
-  transition: 0.3s ease;
-}
-
-.theme-toggle:hover {
-  transform: scale(1.05);
 }
 
 /* Mobile Toggle */
@@ -423,77 +498,6 @@ button {
 }
 
 /* ================================
-   Mobile Navigation
-   ================================ */
-
-@media (max-width: 768px) {
-
-  .nav-container{
-      width:100%;
-  }
-
-  .nav-actions{
-      width:100%;
-
-      display:flex;
-
-      justify-content:space-between;
-
-      align-items:center;
-  }
-
-  .theme-toggle{
-      margin-right:auto;
-  }
-
-  .nav-toggle{
-      display:flex;
-      margin-left:auto;
-  }
-
-  .nav-menu{
-
-      position:absolute;
-
-      top:80px;
-      right:20px;
-
-      width:220px;
-
-      display:none;
-      flex-direction:column;
-
-      gap:0;
-
-      padding:20px;
-
-      background:rgba(5,8,22,.95);
-
-      backdrop-filter:blur(20px);
-      -webkit-backdrop-filter:blur(20px);
-
-      border:1px solid rgba(255,255,255,.08);
-
-      border-radius:20px;
-
-      box-shadow:0 15px 40px rgba(0,0,0,.4);
-  }
-
-  .nav-menu.active{
-      display:flex;
-  }
-
-  .nav-link{
-      display:block;
-
-      text-align:center;
-
-      padding:14px 0;
-
-      font-size:1rem;
-  }
-}
-/* ================================
    Hero Section
    ================================ */
 .hero {
@@ -502,8 +506,8 @@ button {
   flex-direction: column;
   justify-content: center;
   position: relative;
-  padding-top: 50px;
-  padding-bottom: 1px;
+  padding-top: 40px;
+  padding-bottom: 20px;
   background:
     radial-gradient(ellipse at 30% 20%, rgba(0, 212, 255, 0.12) 0%, transparent 45%),
     radial-gradient(ellipse at 70% 60%, rgba(59, 130, 246, 0.1) 0%, transparent 40%),
@@ -1060,6 +1064,10 @@ button {
   filter: invert(1) brightness(0.9);
 }
 
+body.light-mode .skill-logo-card img.invert-icon {
+  filter: brightness(0);
+}
+
 .skill-logo-card span {
   font-size: 0.8rem;
   font-weight: 500;
@@ -1535,10 +1543,13 @@ button {
 }
 
 .contact.section {
-  padding-bottom: 120px;
+  padding-bottom: 0;
 }
 
-/* Social Icons */
+/* ================================
+   Social Icons
+   ================================ */
+
 .social-icons {
   display: flex;
   justify-content: center;
@@ -1552,33 +1563,50 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+
   width: 52px;
   height: 52px;
+
   background: var(--glass-bg);
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
   border: 1px solid var(--glass-border);
   border-radius: 12px;
-  transition: all var(--transition-normal);
+
+  transition: all 0.3s ease;
 }
 
 .social-icons a:hover {
   background: var(--accent-glow);
   border-color: var(--border-accent);
+
   transform: translateY(-4px);
+
   box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
 }
 
-.social-icons img {
-  width: 28px;
-  height: 28px;
-  filter: brightness(1.4);
-  transition: filter var(--transition-fast);
-}
+
 
 .social-icons a:hover img {
-  filter: brightness(1.6);
+  transform: scale(1.1);
 }
 
+.social-icons img{
+    width:28px;
+    height:28px;
+    object-fit:contain;
+}
+
+/* Dark mode only */
+body:not(.light-mode) .social-icons a{
+    background:rgba(255,255,255,.00);
+}
+
+/* Light mode */
+body.light-mode .social-icons a{
+    background:rgba(0,0,0,.05);
+}
 /* ================================
    Footer
    ================================ */
@@ -1604,14 +1632,19 @@ button {
    Mobile Navigation - Dropdown Glassmorphism
    ================================ */
 @media (max-width: 768px) {
-  .nav-toggle {
-    display: flex;
+  .nav-container {
+    width: 100%;
   }
 
-  .nav-actions {
+  .nav-left {
     display: flex;
     align-items: center;
     gap: 12px;
+  }
+
+  .nav-toggle {
+    display: flex;
+    order: 3;
   }
 
   .nav-menu {
@@ -1633,12 +1666,20 @@ button {
     transform: translateY(-10px);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1050;
+    display: none;
   }
 
   .nav-menu.active {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+    display: flex;
+  }
+
+  body.light-mode .nav-menu {
+    background: rgba(255, 255, 255, 0.98);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
   }
 
   .nav-menu .nav-link {
@@ -1675,13 +1716,13 @@ button {
   .hero {
     min-height: auto;
     padding-top: 100px;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
   }
 
   .hero-container {
     grid-template-columns: 1fr;
     text-align: center;
-    gap: 36px;
+    gap: 20px;
   }
 
   .hero-content {

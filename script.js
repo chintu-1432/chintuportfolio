@@ -133,13 +133,15 @@ window.addEventListener('scroll', highlightNavLink)
 // Typing animation
 new Typed('#typed-text', {
   strings: [
-    'Java Developer',
-    'Spring Boot Developer',
-    'Backend Engineer',
-    'Problem Solver',
-    'Building Real-World Applications',
-    'AI Enthusiast',
-    'Open to Opportunities',
+    "Java Developer ☕",
+    "Web Developer 🌐",
+    "Let’s Build Something Unique 💡",
+    "Open to Collaborations 🤝",
+    "Passionate Coder 👨‍💻",
+    "Turning Ideas into Code 🔧",
+    "Always Learning 🌱",
+    "AI Enthusiast",
+    "Open to Opportunities",
   ],
   typeSpeed: 50,
   backSpeed: 35,
